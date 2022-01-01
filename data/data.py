@@ -5,7 +5,7 @@ from torch.utils.data import Subset
 from data.label_shift_utils import prepare_label_shift_data
 from data.confounder_utils import prepare_confounder_data
 
-root_dir = '/u/scr/nlp/dro/'
+root_dir = ""
 
 dataset_attributes = {
     'CelebA': {
@@ -23,7 +23,7 @@ dataset_attributes = {
 }
 
 for dataset in dataset_attributes:
-    dataset_attributes[dataset]['root_dir'] = os.path.join(root_dir, dataset_attributes[dataset]['root_dir'])
+    dataset_attributes[dataset]['root_dir'] = os.path.join(dataset_attributes[dataset]['root_dir'])
 
 shift_types = ['confounder', 'label_shift_step']
 
